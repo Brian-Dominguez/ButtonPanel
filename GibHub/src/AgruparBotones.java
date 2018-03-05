@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -54,23 +56,26 @@ public class AgruparBotones extends JFrame implements ActionListener {
         
         
         JPanel ButtonPanel = new JPanel();
-        ButtonPanel.setLayout(new GridLayout(1,2));
-        //ButtonPanel.setLayout(new BoxLayout(ButtonPanel, BoxLayout.X_AXIS));
+        //ButtonPanel.setLayout(new GridLayout(1,2));
+        /*ButtonPanel.setLayout(new BoxLayout(ButtonPanel, BoxLayout.X_AXIS));
         JRadioButton Button1 = new JRadioButton("Boton1");
         JRadioButton Button2 = new JRadioButton("Boton2");
         ButtonPanel.add(Button1);
-        ButtonPanel.add(Button2);
+        ButtonPanel.add(Button2);*/
         ButtonPanel.setBackground(Color.RED);
         
-        /*JButton btn1 = new JButton("Boton1");
-        btnAceptar.setBounds(30, 30, 100, 30);
+        ButtonPanel.setLayout(new GridLayout(3,3));     
+        JButton btn1 = new JButton("Boton1");
+        JButton btn2 = new JButton("Boton2");       
+        ButtonPanel.add(new JLabel(""));
+        ButtonPanel.add(new JLabel(""));
+        ButtonPanel.add(new JLabel(""));
         ButtonPanel.add(btn1);
-        
-        JButton btn2 = new JButton("Boton2");
-        btnCancelar.setBounds(117, 150, 100, 30);
-        ButtonPanel.add(btn2);*/
-        
-        
+        ButtonPanel.add(new JLabel(""));
+        ButtonPanel.add(btn2);
+        ButtonPanel.add(new JLabel(""));
+        ButtonPanel.add(new JLabel(""));
+        ButtonPanel.add(new JLabel(""));
         
         /*BoxLayout distBoxLayout = new BoxLayout(this.getContentPane(),
                                                 BoxLayout.X_AXIS);
@@ -78,6 +83,8 @@ public class AgruparBotones extends JFrame implements ActionListener {
         */
         
         GridLayout distGrid = new GridLayout(2,0);
+        setPreferredSize(new Dimension(300,320));
+        setResizable(false);
         getContentPane().setLayout(distGrid);
         getContentPane().add(PanelCont2);
         getContentPane().add(ButtonPanel);
